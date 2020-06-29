@@ -1,11 +1,11 @@
-Project Background
+### Project Background
 
 Banking industry is highly competitive and banking products are easily to duplicate. The project provides business owners with a clear picture of what product is the most profitable one to be promoted, what customers to be targeted, what are their common behaviours and attributes, what can we do to keep them, how to convert potential churners to loyal customers before we lose them to our competitors on the first year.
 There are two datasets being involved in this project. ‘bank_transaction’ is a customer level dataset which has columns CustomerID, TransactionID, TransactionDT, TransactionAmt, CardType, isRetention and Frequency. Each data point is a transaction record made by a customer. ‘cap_bank’ dataset has 48 columns and most of them are product name, so it is product level based.This project contains three main parts: A/B Test, Clustering, Classification.
 
 
 
-Part One: A/B test
+#### Part One: A/B test
 
 Techniques being applied: check missing values, check sizing on each group, downsampling, customer behaviour analysis, bootstrap sampling.
 
@@ -15,7 +15,7 @@ There are, of course, other metrics we could look at, like the frequency or how 
 
 
 
-Part Two: Classification 
+#### Part Two: Classification 
 
 Techniques being applied: Logistic Regression, Random Forest, KNN, SVC, feature importance, downsampling, pipeline, gridsearch, hyperparameter optimization, accuracy score, precision, recall, F1 score, roc, and auc.
 
@@ -27,7 +27,7 @@ In terms of improving model accuracy, firstly I lowered the threshold from 0.5 t
 
 
 
-Part three: Clustering
+#### Part three: Clustering
 
 Techniques being applied: check missing values, check duplications, missing values imputation, EDA, K-means, H-clustering, scree plot, silhouette score, rand index.
 
@@ -36,12 +36,12 @@ In order to understand our customers better so as to treat them differently, I c
 
 
 
-Findings and conclusions 
+### Findings and conclusions 
 
-1.We helped the bank identify that promote gold credit card could lead to the highest customer conversion rate.
-2. We figured out what customers have high probability to accept offers and what kind of attributes do they have through feature importance analysis.
-The most impotent features that play a huge influence in how much the likelihood of customers conversion based on the coefficient of each bank product. Customers have such bank products are the right audience we are looking for.  Because they are more likely to convert than others without these features.The most six biggest coefficient belong to features SAVBAL, DDABAL, MM, CD, SAV and CC.The most six smallest coefficient belong to DDA, CHECKS, ILS, MMBAL, ACCTAGE and PHONE.
-3. We detected 3 customer segments through clustering, which remind us to send tailored campaign offers and reach out them by correct channels
-4. We unhide the patterns of different customer segments based on each feature.
-5. Thanks to the highly targeting, we could save the marketing costs and improve ROI.
+    1.We helped the bank identify that promote gold credit card could lead to the highest customer conversion rate.
+    2. We figured out what customers have high probability to accept offers and what kind of attributes do they have through feature importance analysis.
+    The most impotent features that play a huge influence in how much the likelihood of customers conversion based on the coefficient of each bank product. Customers have such bank products are the right audience we are looking for.  Because they are more likely to convert than others without these features.The most six biggest coefficient belong to features SAVBAL, DDABAL, MM, CD, SAV and CC.The most six smallest coefficient belong to DDA, CHECKS, ILS, MMBAL, ACCTAGE and PHONE.
+    3. We detected 3 customer segments through clustering, which remind us to send tailored campaign offers and reach out them by correct channels
+    4. We unhide the patterns of different customer segments based on each feature.
+    5. Thanks to the highly targeting, we could save the marketing costs and improve ROI.
 
