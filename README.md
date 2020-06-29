@@ -38,7 +38,7 @@ In order to understand our customers better so as to treat them differently, I c
 
 ### Findings and conclusions 
 
-    1.We helped the bank identify that promote gold credit card could lead to the highest customer conversion rate.
+    1. We helped the bank identify that promote gold credit card could lead to the highest customer conversion rate.
     2. We figured out what customers have high probability to accept offers and what kind of attributes do they have through feature importance analysis.
     The most impotent features that play a huge influence in how much the likelihood of customers conversion based on the coefficient of each bank product. Customers have such bank products are the right audience we are looking for.  Because they are more likely to convert than others without these features.The most six biggest coefficient belong to features SAVBAL, DDABAL, MM, CD, SAV and CC.The most six smallest coefficient belong to DDA, CHECKS, ILS, MMBAL, ACCTAGE and PHONE.
     3. We detected 3 customer segments through clustering, which remind us to send tailored campaign offers and reach out them by correct channels
