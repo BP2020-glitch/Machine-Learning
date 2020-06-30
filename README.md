@@ -12,6 +12,12 @@ Techniques being applied: check missing values, check sizing on each group, down
 I conducted A/B test to decide what type of credit card we want to promote by comparing the mean of target metric ‘isRetention’ between two types of cardholder: platinum and gold.  Our goal is to see more or less Retention Rate of one group against the other after customers received their new credit card in one week. Retention rate is the percentage of customers that come back and use the card after they have activated it, which is an important metric in measuring new customers. The higher the retention rate is, the easier it is to retain customers and build a large customer base. We are certain of the difference in the existing retention rate, but how to tell the changes in the future? There are a couple of ways we can get at the certainty of retention numbers. Here I used bootstrapping: I repeatedly re-sample our dataset (with replacement) and calculate one week retention for those samples. The variation in one week retention will give us an indication of how uncertain the retention numbers are. I plotted the two distributions and the difference of two groups to represent the bootstrap uncertainty over what the underlying one week retention could be for the two AB-groups. From these graphs, we can see that the most likely % difference is around 4%, and that 92% of the distribution is above 0%, in favor of gold group. The bootstrap result tells us that there is strong evidence that one week retention is higher when people have gold card than others have platinum card. The conclusion is: If we want to keep retention high — we should upsell gold card to customers than only letting them keep existing platinum card.
 There are, of course, other metrics we could look at, like the frequency or how much transaction amount are made by the two AB-groups. But retention is one of the most important metrics. If we don't retain our customer base, it doesn't matter how much money they spend using this credit card.
 
+<img width="305" alt="Screen Shot 2020-06-30 at 12 06 45 AM" src="https://user-images.githubusercontent.com/65318745/86083011-2007c780-ba67-11ea-96d0-aa467d9ceabc.png">
+
+<img width="480" alt="Screen Shot 2020-06-30 at 12 15 11 AM" src="https://user-images.githubusercontent.com/65318745/86083017-2433e500-ba67-11ea-837a-35d03e4bd1ba.png">
+
+
+
 
 
 
@@ -27,11 +33,27 @@ In terms of improving model accuracy, firstly I lowered the threshold from 0.5 t
 
 
 
+<img width="404" alt="Screen Shot 2020-06-30 at 12 08 29 AM" src="https://user-images.githubusercontent.com/65318745/86083032-2e55e380-ba67-11ea-94ba-f8ed74330c65.png">
+
+
+
+
+
 #### Part three: Clustering
 
 Techniques being applied: check missing values, check duplications, missing values imputation, EDA, K-means, H-clustering, scree plot, silhouette score, rand index.
 
 In order to understand our customers better so as to treat them differently, I conducted Unsupervised Machine Learning algorithms K-means and Hierarchical Clustering to compare the agreement percentage of the data so as to unhide the underlying patterns of our customers. The result shows model accuracy does increase after detecting 3 customer segments. The contingency table shows both the algorithms agree 21% of the data, it’s not a high number. So I looked into the rand score which is 0.46, not bad. The score range is between -1.0 and 1.0. It  confirms that there is some agreement between two clustering methods, so we can safely use the labels to do the prediction. After that, I fitted Logistic Regression, Random Forest, KNN and SVC again to compare both the accuracies before adding labels and after adding labels. Accuracies did increase except for Random Forest!But from the perspective of auc, Random Forest preforms the best.
+
+
+<img width="422" alt="Screen Shot 2020-06-30 at 12 07 05 AM" src="https://user-images.githubusercontent.com/65318745/86083037-32820100-ba67-11ea-908f-2c1176322911.png">
+
+<img width="356" alt="Screen Shot 2020-06-30 at 12 07 13 AM" src="https://user-images.githubusercontent.com/65318745/86083041-344bc480-ba67-11ea-8735-ebeb3604e6c5.png">
+
+<img width="489" alt="Screen Shot 2020-06-30 at 12 08 35 AM" src="https://user-images.githubusercontent.com/65318745/86083058-3e6dc300-ba67-11ea-92cf-d467325069ac.png">
+
+<img width="271" alt="Screen Shot 2020-06-30 at 12 08 46 AM" src="https://user-images.githubusercontent.com/65318745/86083061-4168b380-ba67-11ea-8784-8bb5c098a9c5.png">
+
 
 
 
